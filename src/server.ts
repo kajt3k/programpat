@@ -10,6 +10,7 @@ app.get("/", (_, res) => {
 });
 
 const start = async () => {
+  console.log('🚀 Startujemy serwer...');
   // Initialize Payload
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
@@ -18,6 +19,7 @@ const start = async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
     },
   });
+  console.log('✅ Payload został zainicjalizowany!');
 
   // Add your own express routes here
 
